@@ -16,7 +16,7 @@
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
-    "int@typescript-eslint/ban-types": false,
-    "int@typescript-eslint/no-empty-interface": false
+    "int@typescript-eslint/ban-types": 0,
+    "int@typescript-eslint/no-empty-interface": 0
   }
 }
