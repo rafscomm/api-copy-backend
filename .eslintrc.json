@@ -12,11 +12,11 @@
   },
   "plugins": ["@typescript-eslint"],
   "rules": {
-    "indent": ["error", 2],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
-    "int@typescript-eslint/ban-types": 0,
-    "int@typescript-eslint/no-empty-interface": 0
+    "@typescript-eslint/ban-types": 0,
+    "@typescript-eslint/no-empty-interface": 0
   }
 }
