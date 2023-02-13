@@ -7,8 +7,8 @@ export async function up(knex: Knex) {
     .schema
     .createTable(TableNames.cidades, table =>{
       table.bigIncrements('id').primary().index();
-      table.string('uf', 2).notNullable().index();
-      table.string('municipio', 255).notNullable();
+      table.string('uf', 2);
+      table.string('municipio', 255);
     })
     .then(() =>{
       console.log(`#Criado a tabela ${TableNames.cidades}`);

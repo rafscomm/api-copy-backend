@@ -1,5 +1,5 @@
 
-export enum ETableNames  {
+export enum TableNames  {
   cidades = 'cidades',
   clientes = 'clientes'
 }
