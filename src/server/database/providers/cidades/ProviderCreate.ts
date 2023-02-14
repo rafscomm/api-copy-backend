@@ -1,20 +1,18 @@
 import { Knex } from '../../knex';
-import { ICidade } from '../../models';
 import {TableNames} from '../../ETableNames';
 
-export const providerCreate = async (cidade: Omit<ICidade, 'id'>): Promise<number | Error> =>{
+export const providerGetByUf = async (uf: string): Promise<number | Error> =>{
   try {
-    const [result] =  await Knex(TableNames.cidades).insert(cidade).returning('id');
+    const [result] =  await Knex.where('uf', uf).select('municipio').from(TableNames.cidades).returning('id');
     if (typeof result === 'object') {
       return result.id;
     } else if (typeof result === 'number'){
       return result;
     }
-    return new Error ('Erro ao cadastrar');
+    return new Error ('Erro ao retornar as cidades');
   } catch (error) {
 
-    return new Error('Erro ao cadastrar');
+    return new Error('Erro ao retornar as cidades');
   }
-
 
 };

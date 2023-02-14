@@ -1,7 +1,7 @@
-import * as  providerCreate from './ProviderCreate';
+import * as  providerGetByUf from './ProviderCreate';
 
 
 
 export const CidadesProvider = {
-  ...providerCreate
+  ...providerGetByUf
 };
