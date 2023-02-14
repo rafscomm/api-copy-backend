@@ -1,18 +1,18 @@
-import { Knex } from '../../knex';
-import {TableNames} from '../../ETableNames';
+import { Knex } from "../../knex";
+import { TableNames } from "../../ETableNames";
+import { ICidade } from "../../models";
 
-export const providerGetByUf = async (uf: string): Promise<number | Error> =>{
+export const providerGetByUf = async (
+  uf: string
+): Promise<ICidade[] | Error> => {
   try {
-    const [result] =  await Knex.where('uf', uf).select('municipio').from(TableNames.cidades).returning('id');
-    if (typeof result === 'object') {
-      return result.id;
-    } else if (typeof result === 'number'){
-      return result;
-    }
-    return new Error ('Erro ao retornar as cidades');
+    const result= await Knex(TableNames.cidades)
+      .select('municipio')
+      .where("uf", "=", uf);
+    if (result) return result;
+    return new Error("Erro ao retornar as cidades");
   } catch (error) {
-
-    return new Error('Erro ao retornar as cidades');
+    console.log(error);
+    return new Error("Erro ao retornar as cidades");
   }
-
 };
