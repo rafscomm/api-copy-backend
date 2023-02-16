@@ -3,14 +3,15 @@ import path from 'path';
 import 'dotenv/config';
 
 export const development: Knex.Config = {
-  client: 'mysql2',
+  client: 'pg',
   connection:{
     // filename: path.resolve(__dirname,'..', '..', '..','..', 'database.sqlite')
-    host: 'localhost',
-    port:3306,
-    user: 'root',
-    password: 'gehmni',
-    database:'copycenterdev'
+    host: process.env.HOST_NAME,
+    server: process.env.SERVER_NAME,
+    port:Number(process.env.PORT_DATABASE),
+    user:  process.env.USER_DATABASE,
+    password: process.env.PASSWORD,
+    database:process.env.DATABASE_NAME
 
   },
   migrations:{

@@ -11,9 +11,11 @@ export async function up(knex: Knex) {
       table.string('cep', 13).notNullable();
       table.string('bairro', 255).notNullable();
       table.string('complemento', 255).nullable();
-      table.bigint('numero').nullable();
-      table.string('uf_cidade',2).references(TableNames.cidades);
-      table.string('municipio_cidade', 255).references(TableNames.cidades);
+      table.string('numero').notNullable();
+      table.string('cpf',11).unique().nullable()
+      table.string('cnpj',14).unique().nullable()
+      table.string('uf',2).references('uf').inTable(TableNames.uf)
+      table.bigint('id_cidade').references('id').inTable(TableNames.cidades)
     })
     .then(() =>{
       console.log(`#Criado a tabela ${TableNames.clientes}`);
