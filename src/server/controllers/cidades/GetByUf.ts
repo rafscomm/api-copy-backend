@@ -1,7 +1,7 @@
 import { Request, RequestHandler, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import * as yup from 'yup'
-import { providerGetByUf } from '../../database/providers/cidades/ProviderCreate';
+import { providerGetByUf } from '../../database/providers/cidades/FindByUf';
 import { validation } from '../../shared/middlewares';
 
 interface IParamsProps {
