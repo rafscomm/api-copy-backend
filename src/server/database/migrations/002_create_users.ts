@@ -7,9 +7,9 @@ export async function up(knex: Knex) {
     .schema
     .createTable(TableNames.usuarios, table =>{
       table.bigIncrements('id').index().primary();
-      table.string('nome').notNullable().checkLength('>',3);
+      table.string('nome').notNullable().checkLength('>=',3);
       table.string('email').index().unique().notNullable().checkLength('>',5);
-      table.string('senha').notNullable().checkLength('>',6)
+      table.string('senha').notNullable().checkLength('>=',6)
     })
     .then(() =>{
       console.log(`#Criado a tabela ${TableNames.usuarios}`);
