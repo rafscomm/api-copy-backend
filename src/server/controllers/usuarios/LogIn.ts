@@ -1,3 +1,4 @@
+import { PasswordCrypto } from './../../shared/services/PasswordCrypto';
 import { StatusCodes } from 'http-status-codes';
 import { validation } from './../../shared/middlewares/Validation';
 import * as yup from 'yup'
@@ -29,7 +30,8 @@ export const LogIn = async (req: Request<{},{}, IUsuario>, res: Response) =>{
         })
     }
 
-    if(senha !== result.senha){
+    const verifyPass = await PasswordCrypto.verifyPassword(senha, result.senha)
+    if(!verifyPass){
         return res.status(StatusCodes.UNAUTHORIZED).json({
             errors: {
                 default: 'Email ou senha são inválidos'
