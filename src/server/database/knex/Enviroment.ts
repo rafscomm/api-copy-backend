@@ -7,11 +7,11 @@ export const development: Knex.Config = {
   connection:{
     // filename: path.resolve(__dirname,'..', '..', '..','..', 'database.sqlite')
     host: process.env.HOST_NAME,
-    server: process.env.SERVER_NAME,
+    server: 'Dev',
     port:Number(process.env.PORT_DATABASE),
-    user:  process.env.USER_DATABASE,
-    password: process.env.PASSWORD,
-    database:process.env.DATABASE_NAME
+    user:  'postgres',
+    password: 'gehmni',
+    database:'copycenterdev'
 
   },
   migrations:{

@@ -4,7 +4,6 @@
   "main": "index.js",
   "author": "Rafael Pereira",
   "license": "MIT",
-  "private": false,
   "scripts": {
     "start": "ts-node-dev ./src/index.ts",
     "production": "node ./build/index.js",

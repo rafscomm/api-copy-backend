@@ -5594,33 +5594,33 @@ const cidadesTo = ["Abreulândia",
 "Tupiratins",
 "Wanderlândia",
 "Xambioá"]
-export const insertBa = cidadesBa.map((element) => ({Uf: `BA`, municipio: element}));
-export const insertAc = cidadesAc.map((element) => ({Uf: `AC`, municipio: element}));
-export const insertAl = cidadesAl.map((element) => ({Uf: `AL`, municipio: element}));
-export const insertAm = cidadesAm.map((element) => ({Uf: `AM`, municipio: element}));
-export const insertAp = cidadesAp.map((element) => ({Uf: `AP`, municipio: element}));
-export const insertCe = cidadesCe.map((element) => ({Uf: `CE`, municipio: element}));
-export const insertDf = cidadesDf.map((element) => ({Uf: `DF`, municipio: element}));
-export const insertEs = cidadesEs.map((element) => ({Uf: `ES`, municipio: element}));
-export const insertGo = cidadesGo.map((element) => ({Uf: `GO`, municipio: element}));
-export const insertMa = cidadesMa.map((element) => ({Uf: `GO`, municipio: element}));
-export const insertMg = cidadesMg.map((element) => ({Uf: `MG`, municipio: element}));
-export const insertMs = cidadesMs.map((element) => ({Uf: `MS`, municipio: element}));
-export const insertMt = cidadesMt.map((element) => ({Uf: `MT`, municipio: element}));
-export const insertPa = cidadesPa.map((element) => ({Uf: `PA`, municipio: element}));
-export const insertPb = cidadesPb.map((element) => ({Uf: `PB`, municipio: element}));
-export const insertPe = cidadesPe.map((element) => ({Uf: `PE`, municipio: element}));
-export const insertPi = cidadesPi.map((element) => ({Uf: `PI`, municipio: element}));
-export const insertPr = cidadesPr.map((element) => ({Uf: `PR`, municipio: element}));
-export const insertRj = cidadesRj.map((element) => ({Uf: `RJ`, municipio: element}));
-export const insertRn = cidadesRn.map((element) => ({Uf: `RN`, municipio: element}));
-export const insertRo = cidadesRo.map((element) => ({Uf: `RO`, municipio: element}));
-export const insertRr = cidadesRr.map((element) => ({Uf: `RR`, municipio: element}));
-export const insertRs = cidadesRs.map((element) => ({Uf: `RS`, municipio: element}));
-export const insertSc = cidadesSc.map((element) => ({Uf: `SC`, municipio: element}));
-export const insertSe = cidadesSe.map((element) => ({Uf: `SE`, municipio: element}));
-export const insertSp = cidadesSp.map((element) => ({Uf: `SP`, municipio: element}));
-export const insertTo = cidadesTo.map((element) => ({Uf: `TO`, municipio: element}));
+export const insertBa = cidadesBa.map((element) => ({uf: `BA`, municipio: element}));
+export const insertAc = cidadesAc.map((element) => ({uf: `AC`, municipio: element}));
+export const insertAl = cidadesAl.map((element) => ({uf: `AL`, municipio: element}));
+export const insertAm = cidadesAm.map((element) => ({uf: `AM`, municipio: element}));
+export const insertAp = cidadesAp.map((element) => ({uf: `AP`, municipio: element}));
+export const insertCe = cidadesCe.map((element) => ({uf: `CE`, municipio: element}));
+export const insertDf = cidadesDf.map((element) => ({uf: `DF`, municipio: element}));
+export const insertEs = cidadesEs.map((element) => ({uf: `ES`, municipio: element}));
+export const insertGo = cidadesGo.map((element) => ({uf: `GO`, municipio: element}));
+export const insertMa = cidadesMa.map((element) => ({uf: `GO`, municipio: element}));
+export const insertMg = cidadesMg.map((element) => ({uf: `MG`, municipio: element}));
+export const insertMs = cidadesMs.map((element) => ({uf: `MS`, municipio: element}));
+export const insertMt = cidadesMt.map((element) => ({uf: `MT`, municipio: element}));
+export const insertPa = cidadesPa.map((element) => ({uf: `PA`, municipio: element}));
+export const insertPb = cidadesPb.map((element) => ({uf: `PB`, municipio: element}));
+export const insertPe = cidadesPe.map((element) => ({uf: `PE`, municipio: element}));
+export const insertPi = cidadesPi.map((element) => ({uf: `PI`, municipio: element}));
+export const insertPr = cidadesPr.map((element) => ({uf: `PR`, municipio: element}));
+export const insertRj = cidadesRj.map((element) => ({uf: `RJ`, municipio: element}));
+export const insertRn = cidadesRn.map((element) => ({uf: `RN`, municipio: element}));
+export const insertRo = cidadesRo.map((element) => ({uf: `RO`, municipio: element}));
+export const insertRr = cidadesRr.map((element) => ({uf: `RR`, municipio: element}));
+export const insertRs = cidadesRs.map((element) => ({uf: `RS`, municipio: element}));
+export const insertSc = cidadesSc.map((element) => ({uf: `SC`, municipio: element}));
+export const insertSe = cidadesSe.map((element) => ({uf: `SE`, municipio: element}));
+export const insertSp = cidadesSp.map((element) => ({uf: `SP`, municipio: element}));
+export const insertTo = cidadesTo.map((element) => ({uf: `TO`, municipio: element}));
 
 
 

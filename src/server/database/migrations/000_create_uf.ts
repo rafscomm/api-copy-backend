@@ -16,7 +16,7 @@ export async function up(knex: Knex) {
         .createTable(TableNames.cidades, table =>{
           table.bigIncrements('id').index().primary();
           table.string('municipio',255);
-          table.string('uf',2).references('uf').inTable(TableNames.uf).unique();
+          table.string('uf',2).references('uf').inTable(TableNames.uf);
         })
       console.log(`#Criado a tabela ${TableNames.uf}`);
     })
