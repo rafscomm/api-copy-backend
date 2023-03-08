@@ -1,3 +1,4 @@
+import { JWTService } from './../../shared/services/JWTService';
 import { PasswordCrypto } from './../../shared/services/PasswordCrypto';
 import { StatusCodes } from 'http-status-codes';
 import { validation } from './../../shared/middlewares/Validation';
@@ -38,7 +39,16 @@ export const LogIn = async (req: Request<{},{}, IUsuario>, res: Response) =>{
             }
         })
     }else{
-        return res.status(StatusCodes.OK).json({accessToken: "teste"})
+        const acessToken = JWTService.sign({uid: result.id});
+        if(acessToken === 'JWT_SECRET_NOT_FOUND'){
+            return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
+                errors: {
+                    default: 'String JWT_SECRET não encontrada'
+                }
+            })
+            
+        }
+        return res.status(StatusCodes.OK).json({acessToken})
     }
 
     
