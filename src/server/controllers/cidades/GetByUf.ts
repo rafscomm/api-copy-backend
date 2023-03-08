@@ -1,20 +1,22 @@
-import { Request, RequestHandler, Response } from 'express';
+import { Request,Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import * as yup from 'yup'
 import { providerGetByUf } from '../../database/providers/cidades/FindByUf';
 import { validation } from '../../shared/middlewares';
 
 interface IParamsProps {
- uf: string
+ uf?: string
 }
 
 const validaParamsCidade : yup.SchemaOf<IParamsProps> = yup.object().shape({
   uf: yup.string().required().min(2).max(2)
 })
 
-export const getByUfValidation = validation({
-  params: validaParamsCidade,
-});
+export const getByUfValidation = validation((getSchema)=>({
+  body: getSchema<IParamsProps>(yup.object().shape({
+      uf: yup.string().required().min(2)
+  }))
+}))
 
 export const getByUf = async (req:Request<IParamsProps>, res:Response) =>{
    if(!req.params.uf){
