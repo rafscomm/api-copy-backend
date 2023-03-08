@@ -13,7 +13,7 @@ const validaParamsCidade : yup.SchemaOf<IParamsProps> = yup.object().shape({
 })
 
 export const getByUfValidation = validation((getSchema)=>({
-  body: getSchema<IParamsProps>(yup.object().shape({
+  params: getSchema<IParamsProps>(yup.object().shape({
       uf: yup.string().required().min(2)
   }))
 }))
